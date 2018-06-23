@@ -153,7 +153,7 @@ class SmartCameraModule(mp_module.MPModule):
                 self.__vRegisterQXCamera(i)
 
             # Pi Camera Module
-            if camera_type == 3
+            if camera_type == 3:
                 new_camera = PiCam(i)
                 self.camera_list = self.camera_list + [new_camera]
 
