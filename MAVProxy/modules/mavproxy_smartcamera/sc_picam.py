@@ -54,6 +54,10 @@ class PiCam:
         if mGPSMessage.get_type() == 'GLOBAL_POSITION_INT':
             (self.vehicleLat, self.vehicleLon, self.vehicleHdg, self.vehicleAMSL) = (mGPSMessage.lat*1.0e-7, mGPSMessage.lon*1.0e-7, mGPSMessage.hdg*0.01, mGPSMessage.alt*0.001)
 
+    def boSet_Attitude(self, mAttitudeMessage):
+        # not using attitude yet.
+        pass
+
     # latest_image - returns latest image captured and write it to file
     def get_latest_image(self):
         session_dir = os.path.join(self.photos_dir, str(self.instance))
